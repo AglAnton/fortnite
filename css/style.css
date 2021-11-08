@@ -72,6 +72,9 @@ p {
 .header .row {
   width: 100%;
 }
+.header .nav {
+  z-index: 99999;
+}
 .nav-list {
   padding: 0;
   margin: 0;
@@ -118,8 +121,8 @@ p {
 }
 .header .container {
   height: 100%;
-  padding-top: 50vh;
-  transform: translateY(-25%);
+  transform: translateY(26%);
+  z-index: 0;
 }
 .header .offer {
   position: relative;
