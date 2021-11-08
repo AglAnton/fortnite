@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Mont';
+  src: local('Mont Extra Light'), local('Mont-Extra-Light'),
+      url('../fonts/Mont-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Mont-ExtraLight.woff') format('woff'),
+      url('../fonts/Mont-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mont-bold';
+  src: local('Mont Heavy'), local('Mont-Heavy'),
+      url('../fonts/Mont-Heavy.woff2') format('woff2'),
+      url('../fonts/Mont-Heavy.woff') format('woff'),
+      url('../fonts/Mont-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Mont';
+  color: #D1D1D2;
+}
+p {
+  font-size: 1.2em;
+}
+.title {
+  font-family: 'Mont-bold';
+  color: #fff;
+}
+.subtitle {
+  color: #557CB0;
+}
+.title-2 {
+  position: relative;
+}
+.title-2 h2 {
+  font-size: 2.7em;
+  position: relative;
+  z-index: 1;
+}
+.title-2 .line {
+  position: absolute;
+  top: 25px;
+  left: 48%;
+  height: 28px;
+  z-index: 0;
+}
+.button {
+  color: #fff;
+  background-color: #6697DA;
+  border-radius: 22px;
+  width: 200px;
+  font-family: 'Mont-bold';
+  z-index: 1;
+  position: relative;
+  font-size: 1.4em;
+  padding: 8px;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: #fff;
+  color: #15151A;
+}
+
+.header {
+  height: 100vh;
+  background: url('../img/bg_head.png') center no-repeat #15151A;
+  background-size: cover;
+  padding-top: 30px;
+}
+.header .row {
+  width: 100%;
+}
+.nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list_item a {
+  font-size: 0.8em;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #6697DA;
+  border-radius: 100px;
+  padding: 5px auto;
+  width: 115px;
+  color: #D1D1D2;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.nav-list_item a:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #15151A;
+}
+.nav-list_item a:active {
+  transform: translateY(1px);
+}
+.logo, .vk {
+  width: 30px;
+}
+.vk img {
+  width: 100%;
+}
+.vk {
+  transition: 0.2s;
+}
+.vk:hover {
+  background-color: #fff;
+  border-radius: 100px;
+}
+.vk:hover img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.header .container {
+  height: 100%;
+  margin-top: 50vh;
+  transform: translateY(-25%);
+}
+.header .offer {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 40px;
+}
+.header .offer .background{
+  position: absolute;
+  left: -33%;
+  top: -58%;
+  width: 140%;
+  z-index: 0;
+}
+.header h1 {
+  font-size: 4.5em;
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+  margin-bottom: 20px;
+}
