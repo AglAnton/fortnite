@@ -68,6 +68,7 @@ p {
   background: url('../img/bg_head.png') center no-repeat #15151A;
   background-size: cover;
   padding-top: 30px;
+  position: relative;
 }
 .header .row {
   width: 100%;
@@ -120,9 +121,11 @@ p {
   filter: invert(1);
 }
 .header .container {
-  height: 100%;
-  transform: translateY(26%);
   z-index: 0;
+  position: absolute;
+  left: 0;right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header .offer {
   position: relative;
