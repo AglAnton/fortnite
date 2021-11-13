@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TBP Fortnite</title>
 
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css.map">
   <link rel="stylesheet" href="css/style.css">
@@ -17,12 +18,12 @@
       <div class="row align-items-center">
         <div class="col-md-1 offset-1 d-flex justify-content-center"><img src="img/logo.png" alt="logo" class="logo"></div>
         <div class="col-md-6 offset-1">
-          <ul class="nav-list">
+          <ul class="nav-list" id="main-nav">
             <li class="nav-list_item d-flex align-items-center"><a href="#about-project">О проекте</a></li>
-            <li class="nav-list_item d-flex align-items-center"><a href="#">Наши тренера</a></li>
-            <li class="nav-list_item d-flex align-items-center"><a href="#">Наша миссия</a></li>
-            <li class="nav-list_item d-flex align-items-center"><a href="#">Отзывы</a></li>
-            <li class="nav-list_item d-flex align-items-center"><a href="#">Видеоуроки</a></li>
+            <li class="nav-list_item d-flex align-items-center"><a href="#coach">Наши тренера</a></li>
+            <li class="nav-list_item d-flex align-items-center"><a href="#our-mission">Наша миссия</a></li>
+            <li class="nav-list_item d-flex align-items-center"><a href="#reviews">Отзывы</a></li>
+            <li class="nav-list_item d-flex align-items-center"><a href="#lesson">Видеоуроки</a></li>
           </ul>
         </div>
         <div class="col-md-1 offset-1 d-flex justify-content-center">
@@ -47,8 +48,7 @@
               <h2 class="title">О проекте</h2>
               <img src="img/line.png" class="line">
             </div>
-            <br>
-            <p class="subtitle">TBP Fortnite - To Become a Pro</p>
+            <p class="subtitle mt-4">TBP Fortnite - To Become a Pro</p>
             <p>Готовим игроков на киберспортивную сцену и учим зарабатывать, просто играя в игры</p>
             <p>Обучили более 50 игркоов, 49-и из которых тренировка понравилась и они стали играть в несколько раз лучше</p>
           </div>
@@ -56,7 +56,163 @@
       </div>
     </div>
   </header>
+
+  <section class="coach" id="coach">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <div class="title-2">
+            <h2 class="title">Наши тренера</h2>
+            <img src="img/line.png" class="line">
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="row justify-content-center">
+        <div class="col-10">
+          
+          <div class="slider-coach">
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/smithmiddle.png" class="left">
+              </div>
+              <p class="name title text-uppercase">smithmiddle</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/folnet.png" class="left">
+              </div>
+              <p class="name title text-uppercase">folnet</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/boombaw1.png">
+              </div>
+              <p class="name title text-uppercase" class="right">boombaw1</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/palochka.png" class="left">
+              </div>
+              <p class="name title text-uppercase">palochka</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/mayhem.png" class="right">
+              </div>
+              <p class="name title text-uppercase">mayhem</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+            <div class="slider-item text-center">
+              <div class="avatar">
+                <div class="box"></div>
+                <img src="img/coach/shedire.png" class="center">
+              </div>
+              <p class="name title text-uppercase">shedire</p>
+              <button type="button" class="btn button mini">Подробнее</button>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-mission" id="our-mission">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <div class="title-2">
+            <h2 class="title">Наша миссия</h2>
+            <img src="img/line.png" class="line">
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="row">
+          <div class="col-md-5 offset-1">
+            <p class="subtitle w-75">TBP Fortnite - что это, для чего
+              и каков наш истинный замысел?<br>Начнем по порядку.</p>
+              
+            <p class="mt-4"><span class="subtitle">To Become a Pro</span> - проект, название которого
+              говорит само за себя. Именно здесь игроки
+              любого уровня могут заказать тренировку у
+              профессионалов за адекватную цену, получив
+              массу опыта и приятно проведя время.</p>
+
+            <p class="mt-4">Основной нашей целью является обучение игроков,
+              желающих попасть на киберспортивную сцену и
+              зарабатывать, просто играя в игры. TBP сможет
+              помочь этим людям проделать долгий и тернистый
+              путь быстрее.</p>
+          </div>
+          <div class="col-md-5">
+            <img src="img/cur-mission.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <div class="title-2">
+            <h2 class="title">Отзывы</h2>
+            <img src="img/line.png" class="line">
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <div class="row">
+          <div class="col">
+            <div class="review-block">
+              <p class="title">Александр Павленко</p>
+              <p>Понравиолсь, указали на несколько ошибок после их исправления стало легче играть</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="review-block">
+              <p class="title">Александр Павленко</p>
+              <p>Понравиолсь, указали на несколько ошибок после их исправления стало легче играть</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="review-block">
+              <p class="title">Александр Павленко</p>
+              <p>Понравиолсь, указали на несколько ошибок после их исправления стало легче играть</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="review-block">
+              <p class="title">Александр Павленко</p>
+              <p>Понравиолсь, указали на несколько ошибок после их исправления стало легче играть</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn button mini reverse more-reviews mt-5">Больше отзывов</button>
+      </div>
+    </div>
+  </section>
+
+  <a href="#about-project" class="btn-top"><img src="img/top.png"></a>
   
-  <link rel="stylesheet" href="js/jquery.min.js">
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
