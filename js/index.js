@@ -12,12 +12,31 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    dots: true,
     prevArrow: '<button class="slick-btn prev"><img src="../img/btn-prev.png"></button>',
     nextArrow: '<button class="slick-btn next"><img src="../img/btn-next.png"></button>',
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   // Увеличение отзывов
   $('.review-block').on('mouseover', function() {
+    if ($(window).width() <= 991) return;
+
     $(this).css('transform', 'scale(1.2)');
     $(this).parent().nextAll().each((i, el) => {
       $(el).find('.review-block').css({
@@ -31,6 +50,8 @@ $(document).ready(function(){
     });
   });
   $('.review-block').on('mouseout', function() {
+    if ($(window).width() <= 991) return;
+
     $('.review-block').css({
       transform: 'scale(1)',
       transformOrigin: 'center',
@@ -56,5 +77,18 @@ $(document).ready(function(){
         }
       });
     }
+  });
+
+  // Меню
+  $('body').on('click', '.nav-button:not(.open)', function(){
+    let $this = $(this);
+    $this.toggleClass('open');
+    $('.nav-mini').toggleClass('open');
+    setTimeout(() => {
+      $('body').one('click', function() {
+        $this.removeClass('open');
+        $('.nav-mini').removeClass('open');
+      });
+    });
   });
 });
