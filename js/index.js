@@ -13,8 +13,8 @@ $(document).ready(function(){
     slidesToShow: 3,
     slidesToScroll: 3,
     dots: true,
-    prevArrow: '<button class="slick-btn prev"><img src="../img/btn-prev.png"></button>',
-    nextArrow: '<button class="slick-btn next"><img src="../img/btn-next.png"></button>',
+    prevArrow: '<button class="slick-btn prev"><img src="img/btn-prev.png"></button>',
+    nextArrow: '<button class="slick-btn next"><img src="img/btn-next.png"></button>',
     responsive: [
       {
         breakpoint: 991,
