@@ -496,6 +496,10 @@ section {
   .coach-detail img {
     margin-top: 75px;
   }
+  .slick-btn {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 /* sm */
@@ -519,5 +523,9 @@ section {
   }
   .coach-detail img {
     width: 300px;
+  }
+  .slick-btn {
+    width: 60px;
+    height: 60px;
   }
 }
