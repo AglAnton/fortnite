@@ -500,6 +500,9 @@ section {
     width: 55px;
     height: 55px;
   }
+  .content-block {
+    padding-top: 60px;
+  }
 }
 
 /* sm */
@@ -522,7 +525,7 @@ section {
     text-align: center;
   }
   .coach-detail img {
-    width: 300px;
+    width: 270px;
   }
   .slick-btn {
     width: 60px;
