@@ -61,10 +61,10 @@ $(document).ready(function(){
 
   // Кнопка наверх
   $(window).on("scroll", function() {
-    if ($(window).width() <= 768) return;
-
+    let isMobile = $(window).width() <= 768;
     let height = $(window).height();
-    if ($(window).scrollTop() > height) {
+    if ($(window).scrollTop() > height && !isMobile) {
+
       $('.btn-top').show({
         duration: 'fast',
         complete: () => {
