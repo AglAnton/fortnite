@@ -1,3 +1,13 @@
+<?php
+  $json = file_get_contents('coaches/data.json');
+  $data = json_decode($json, true);
+
+  if (empty($data)) {
+    echo 'Ошибка в coaches/data.json';
+    return;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -22,10 +32,10 @@
           <div class="col-lg-8 col-md-10 col-6 offset-0">
             <ul class="nav-list d-none d-md-flex" id="main-nav">
               <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#about-project">О проекте</a></li>
-              <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#coach">Наши тренера</a></li>
+              <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#coach">Наши тренеры</a></li>
               <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#our-mission">Наша миссия</a></li>
               <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#reviews">Отзывы</a></li>
-              <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#lesson">Видеоуроки</a></li>
+              <!-- <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#lesson">Видеоуроки</a></li> -->
             </ul>
             <div class="nav-button d-block d-md-none">
               <span></span>
@@ -71,7 +81,7 @@
       <div class="row justify-content-center">
         <div class="col text-center overflow-hidden">
           <div class="title-2">
-            <h2 class="title">Наши тренера</h2>
+            <h2 class="title">Наши тренеры</h2>
             <img src="img/line.png" class="line">
           </div>
         </div>
@@ -82,56 +92,16 @@
         <div class="col-lg-10 col-12">
           
           <div class="slider-coach">
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/smithmiddle.png" class="left">
+            <?php foreach($data as $k => $v) { ?>
+              <div class="slider-item text-center">
+                <div class="avatar">
+                  <div class="box"></div>
+                  <img src="img/coach/<?= $v['img'] ?>" class="<?= $v['img_position'] ?>">
+                </div>
+                <p class="name title text-uppercase"><?= $v['name'] ?></p>
+                <a href="coaches/coach.php?id=<?= $k ?>" class="btn button mini">Подробнее</a>
               </div>
-              <p class="name title text-uppercase">smithmiddle</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/folnet.png" class="left">
-              </div>
-              <p class="name title text-uppercase">folnet</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/boombaw1.png" class="right">
-              </div>
-              <p class="name title text-uppercase" class="right">boombaw1</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/palochka.png" class="left">
-              </div>
-              <p class="name title text-uppercase">palochka</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/mayhem.png" class="right">
-              </div>
-              <p class="name title text-uppercase">mayhem</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-            <div class="slider-item text-center">
-              <div class="avatar">
-                <div class="box"></div>
-                <img src="img/coach/shedire.png" class="center">
-              </div>
-              <p class="name title text-uppercase">shedire</p>
-              <button type="button" class="btn button mini">Подробнее</button>
-            </div>
-          </div>
-
+            <?php } ?>
         </div>
         </div>
       </div>
@@ -237,80 +207,13 @@
     </div>
   </section>
 
-  <section class="lesson" id="lesson">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-4 offset-lg-1 offset-0">
-          <div class="avatar">
-            <div class="box"></div>
-            <img src="img/coach/palochka.png" class="left">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-8">
-          <div class="desc-block mt-4">
-            <p class="title nic">palochka</p>
-            <ul class="desc">
-              <li class="desc-item">Европейский регион (EU)</li>
-              <li class="desc-item">Внутриигровой заработок в размере $1.200</li>
-              <li class="desc-item">8.000 очков рейтинга (PR)</li>
-              <li class="desc-item">Лучшие результаты: #75 и #153 места на двух последних Trio Cash Cup'ax 17 сезона</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-12">
-          <p class="title subtitle mt-3">НАУЧИТ, КАК БЫТЬ WASHED И ВСЁ РАВНО ЗАНИМАТЬ ХОРОШИЕ МЕСТА</p>
-          <p class="title mt-5">Продуктовая линейка</p>
-          <ul class="products">
-            <li class="products-item">
-              <span class="name">Просмотр демки (30 минут)</span>
-              <div class="block">
-                <span class="price">675 рублей</span>
-                <button type="button" class="btn button mini"> Заказать</button>
-              </div>
-            </li>
-            <li class="products-item">
-              <span class="name">Тренировка аима (40 минут)</span>
-              <div class="block">
-                <span class="price">880 рублей</span>
-                <button type="button" class="btn button mini"> Заказать</button>
-              </div>
-            </li>
-            <li class="products-item">
-              <span class="name">Тренировка строительства (1 час)</span>
-              <div class="block">
-                <span class="price">880 рублей</span>
-                <button type="button" class="btn button mini"> Заказать</button>
-              </div>
-            </li>
-            <li class="products-item">
-              <span class="name">Тренировочная сессия (1 час)</span>
-              <div class="block">
-                <span class="price">900 рублей</span>
-                <button type="button" class="btn button mini"> Заказать</button>
-              </div>
-            </li>
-            <li class="products-item">
-              <span class="name">Тренировочная сессия (2 часа)</span>
-              <div class="block">
-                <span class="price">1500 рублей</span>
-                <button type="button" class="btn button mini"> Заказать</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <div class="nav-mini">
     <ul class="nav-mini-list" id="mini-nav">
       <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#about-project">О проекте</a></li>
-      <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#coach">Наши тренера</a></li>
+      <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#coach">Наши тренеры</a></li>
       <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#our-mission">Наша миссия</a></li>
       <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#reviews">Отзывы</a></li>
-      <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#lesson">Видеоуроки</a></li>
+      <!-- <li class="nav-list_item d-flex align-items-center"><a class="anchor" href="#lesson">Видеоуроки</a></li> -->
     </ul>
   </div>
 

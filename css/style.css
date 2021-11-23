@@ -309,6 +309,10 @@ section {
   margin: 0 auto;
 }
 
+
+.lesson {
+  min-height: 100vh;
+}
 .lesson .nic {
   text-transform: uppercase;
   font-size: 1.8em;

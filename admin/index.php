@@ -1,2 +1,2 @@
 <?php
-  header('Location: http://terentlb.beget.tech/admin/users');
+  header('Location: http://' . $_SERVER['SERVER_NAME'] . '/admin/users.php');
