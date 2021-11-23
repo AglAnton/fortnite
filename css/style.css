@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Mont';
   src: local('Mont Extra Light'), local('Mont-Extra-Light'),
-      url('../fonts/Mont-ExtraLight.woff2') format('woff2'),
-      url('../fonts/Mont-ExtraLight.woff') format('woff'),
-      url('../fonts/Mont-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
+      url('../fonts/Mont-Light.woff2') format('woff2'),
+      url('../fonts/Mont-Light.woff') format('woff'),
+      url('../fonts/Mont-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -106,9 +106,6 @@ p {
   padding-top: 30px;
   position: relative;
 }
-.header .row {
-  width: 100%;
-}
 .header .nav {
   z-index: 99999;
 }
@@ -117,45 +114,60 @@ p {
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+}
+.nav-list_item:not(:first-child) {
+  margin-left: 20px;
 }
 .nav-list_item a {
-  font-size: 0.8em;
+  font-size: 1.1em;
   display: inline-block;
   text-align: center;
-  border: 1px solid #6697DA;
   border-radius: 100px;
-  padding: 5px auto;
-  width: 115px;
   color: #D1D1D2;
   text-decoration: none;
   transition: 0.2s;
   z-index: 99999;
 }
 .nav-list_item a:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #15151A;
+  color: #fff;
 }
 .nav-list_item a:active {
   transform: translateY(1px);
 }
-.logo, .vk {
-  width: 30px;
-}
-.vk img {
-  width: 100%;
+.logo {
+  width: 27px;
+  display: block;
+  margin: 0 auto;
 }
 .vk {
+  border: 1px solid #fff;
+  border-radius: 100px;
   transition: 0.2s;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.vk a {
+  color: #fff;
+  text-decoration: none;
 }
 .vk:hover {
   background-color: #fff;
-  border-radius: 100px;
 }
-.vk:hover img {
-  -webkit-filter: invert(1);
-  filter: invert(1);
+.vk:hover a {
+  color: #000;
+}
+.vk:active {
+  transform: translateY(1px);
+}
+.icon-vkontakte:before {
+  width: 100%;
+  display: flex;
+  margin-top: -1px;
 }
 .header .container {
   z-index: 0;
@@ -203,15 +215,12 @@ section {
 .avatar .box {
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  background-color: #6697DA;
   border-radius: 60px;
   position: absolute;
   left: 50%;
   margin-left: -75px;
   bottom: 0;
-}
-.avatar .box.blue {
-  background-color: #6697DA;
 }
 .avatar img {
   position: absolute;
@@ -428,6 +437,39 @@ section {
   left: 50%;
 }
 
+.section-form input {
+  color: #000;
+}
+.section-form.full-height {
+  min-height: 100vh;
+}
+.section-form .logout {
+  text-align: right;
+}
+
+.footer {
+  padding: 30px 0;
+}
+.footer a {
+  text-align: right;
+}
+
+.video {
+  padding: 50px 0;
+}
+.video img {
+  width: 300px;
+}
+.video .btn {
+  text-transform: none;
+}
+.video video {
+  width: 500px;
+  height: 281px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
 /* lg */
 @media (max-width: 1199px) {
   h1 {
@@ -463,6 +505,9 @@ section {
   .coach .name {
     font-size: 1.2em;
   }
+  .section-form h1 {
+    text-align: center;
+  }
 }
 
 /* md */
@@ -487,6 +532,9 @@ section {
   .header .about-project {
     margin-top: 60px;
   }
+  .nav-list {
+    justify-content: center;
+  }
   section {
     padding: 50px 0;
   }
@@ -503,12 +551,31 @@ section {
   .content-block {
     padding-top: 60px;
   }
+  .video img {
+    width: 250px;
+  }
 }
 
 /* sm */
 @media (max-width: 767px) {
+  h1 {
+    font-size: 2.7em!important;
+  }
+  .vk {
+    width: 35px;
+    height: 35px;
+  }
+  .nav-list_item a {
+    font-size: 0.7em;
+  }
   .our-mission img {
     width: 250px;
+  }
+  .lesson .products {
+    padding: 15px;
+  }
+  .lesson .products .btn {
+    padding: 4px 15px;
   }
   .lesson .products-item .name {
     padding-right: 15px;
@@ -530,5 +597,9 @@ section {
   .slick-btn {
     width: 60px;
     height: 60px;
+  }
+  .video video {
+    width: 300px;
+    height: 167px;
   }
 }

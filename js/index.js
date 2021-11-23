@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Плавный переход
-  $("body").on("click", "a", function (event) {
+  $("body").on("click", "a.anchor", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
@@ -61,6 +61,8 @@ $(document).ready(function(){
 
   // Кнопка наверх
   $(window).on("scroll", function() {
+    if ($(window).width() <= 768) return;
+
     let height = $(window).height();
     if ($(window).scrollTop() > height) {
       $('.btn-top').show({
